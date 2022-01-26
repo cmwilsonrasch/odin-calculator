@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin: 1px;
+  border-radius: 5%;
+  border: none;
+  font-size: 2em;
+  font-weight: 300;
+  min-height: 78px;
+}
+
+#calc {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  min-width: 95vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  background: black;
+  border: 10px solid rgba(47, 47, 47, 1);
+  border-radius: 2%;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(100px auto) repeat(5, 85px);
+}
+
+#display {
+  grid-column: 1 / -1;
+  background: #1c1c1c;
+  color: #d4d4d2;
+  text-shadow: 2px 2px lightslategrey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  min-height: 78px;
+  font-size: 3.5em;
+  padding: 5px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+#zero {
+  grid-column: span 2;
+}
+
+.clear,
+.sign,
+.delete {
+  background: #e9ecef;
+}
+
+.operand {
+  background: #d4d4d2;
+}
+
+.operator,
+.equals {
+  background: #ff9500;
+}
+
+.clear:active,
+.sign:active,
+.delete:active,
+.operand:active,
+.operator:active,
+.equals:active {
+  opacity: 0.9;
+}
